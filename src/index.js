@@ -1,5 +1,5 @@
 /*  
-index.js
+index.js - Основной файл REACT
 
 Koska muut tekemäni tiedostot sijaitsevat kansiossa node_modules,
 importeissa ei tarvitse mainita koko polkua
@@ -30,10 +30,11 @@ import { Router, Route } from "react-router";
 
 // Importoidaan Reduxin Reducers
 import reducers from "reducers";
-// Importoidaan komponentit Layout & Phones
 
+// Importoidaan konteinerit Layout, Phones, Phone
 import Phones from 'containers/phones';
 import Layout from 'containers/layout';
+import Phone from 'containers/phone'
 
 
 
@@ -52,9 +53,9 @@ ReactDOM.render(
   
       <Route component={Layout}>
         {/* Создаем пути - Routes */}
-        <Route path="/" component={Phones} />
-        
+        <Route path="/" component={Phones} />        
       </Route>
+      <Route path='/phones/:id' component={Phone} />
     </Router>
   </Provider>,
   document.getElementById("root")
