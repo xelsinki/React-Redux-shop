@@ -52,9 +52,11 @@ ReactDOM.render(
     <Router history={history}>
   
       <Route component={Layout}>
-        {/* Создаем пути - Routes */}
-        <Route path="/" component={Phones} />        
+        {/* Создаем пути - Routes  для Layout*/}
+        <Route path="/" component={Phones} /> 
+        <Route path='/categories/:id' component={Phones}/>       
       </Route>
+      {/* Route для отдельной страницы Phone  */}
       <Route path='/phones/:id' component={Phone} />
     </Router>
   </Provider>,
