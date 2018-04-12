@@ -34,7 +34,8 @@ import reducers from "reducers";
 // Importoidaan konteinerit Layout, Phones, Phone
 import Phones from 'containers/phones';
 import Layout from 'containers/layout';
-import Phone from 'containers/phone'
+import Phone from 'containers/phone';
+import Basket from 'containers/basket';
 
 
 
@@ -54,7 +55,8 @@ ReactDOM.render(
       <Route component={Layout}>
         {/* Создаем пути - Routes  для Layout*/}
         <Route path="/" component={Phones} /> 
-        <Route path='/categories/:id' component={Phones}/>       
+        <Route path='/categories/:id' component={Phones}/>
+        <Route path='/basket' component={Basket}/>      
       </Route>
       {/* Route для отдельной страницы Phone  */}
       <Route path='/phones/:id' component={Phone} />
